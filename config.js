@@ -3,8 +3,8 @@
 module.exports = {
   url: 'https://lumen.netlify.com',
   pathPrefix: '/',
-  title: 'Blog by John Doe',
-  subtitle: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
+  title: 'Blog by Ernesto Martínez',
+  subtitle: 'Software Engineer / fullstack javascript',
   copyright: '© All rights reserved.',
   disqusShortname: '',
   postsPerPage: 4,
@@ -24,10 +24,10 @@ module.exports = {
       path: '/pages/contacts'
     }
   ],
-  author: {
-    name: 'John Doe',
+  author: { 
+    name: 'Ernesto Martinez',
     photo: '/photo.jpg',
-    bio: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
+    bio: 'Software Engineer / fullstack javascript developer, I like learning everything related to new programming things',
     contacts: {
       email: '#',
       telegram: '#',

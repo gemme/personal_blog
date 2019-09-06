@@ -100,6 +100,34 @@ module.exports = {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
+          {
+            resolve: 'gatsby-remark-mermaid',
+            options: {
+                language: 'mermaid',
+                theme: 'default',
+                viewport: {
+                    width: 200,
+                    height: 200
+                },
+                mermaidOptions: {
+                    themeCSS: ".node rect { fill: cornflowerblue; }"
+                }
+            }
+         },
+          {
+            resolve: `@raae/gatsby-remark-oembed`,
+            options: {
+              // usePrefix defaults to false
+              // usePrefix: true is the same as ["oembed"]
+              usePrefix: ["oembed", "video"],
+              providers: {
+                // Important to exclude providers
+                // that adds js to the page.
+                // If you do not need them.
+                exclude: ["Reddit"]
+              }
+            }
+          },
           'gatsby-remark-relative-images',
           {
             resolve: 'gatsby-remark-katex',

@@ -6,6 +6,7 @@
   "scripts": {
     "develop": "yarn run clean && gatsby develop",
     "build": "yarn run clean && gatsby build",
+    "deploy:github": "npm run build && node ./deploy-github",
     "deploy": "yarn run clean && gatsby build --prefix-paths && gh-pages -d public",
     "clean": "rimraf .cache public",
     "flow": "flow",
@@ -38,6 +39,7 @@
     "disqus"
   ],
   "dependencies": {
+    "@raae/gatsby-remark-oembed": "^0.1.1",
     "bluebird": "^3.5.5",
     "classnames": "^2.2.6",
     "codecov": "^3.5.0",
@@ -61,6 +63,7 @@
     "gatsby-remark-external-links": "0.0.4",
     "gatsby-remark-images": "^3.1.12",
     "gatsby-remark-katex": "^3.1.2",
+    "gatsby-remark-mermaid": "^1.2.0",
     "gatsby-remark-prismjs": "^3.3.5",
     "gatsby-remark-relative-images": "^0.2.3",
     "gatsby-remark-responsive-iframe": "^2.2.4",
@@ -79,7 +82,8 @@
     "react": "^16.9.0",
     "react-disqus-comments": "^1.4.0",
     "react-dom": "^16.9.0",
-    "react-helmet": "^5.2.1"
+    "react-helmet": "^5.2.1",
+    "remark-grid-tables": "^1.7.0"
   },
   "devDependencies": {
     "@babel/core": "7.5.5",
